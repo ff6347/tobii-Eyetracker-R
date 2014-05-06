@@ -1,4 +1,4 @@
-# setwd("/Users/icke/Desktop/tobii-Eyetracker-R")
+ setwd("/Users/icke/Desktop/tobii-Eyetracker-R")
 data <- read.table("tobii-CSVExport-All-Data-noheader-nofilter.tsv",sep="\t", header=TRUE)
 # plot(data$GazePointX,data$GazePointY, main="eyetracker", sub="",xlab="X-axis GazePointX", ylab="GazePointY", ylim=c(1024,0), xlim=c(0,1280))
 # png(filename="out.png", width = 1280, height = 1024,)
