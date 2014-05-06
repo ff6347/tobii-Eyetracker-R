@@ -4,7 +4,6 @@ data <- read.table("tobii-CSVExport-All-Data-noheader-nofilter.tsv",sep="\t", he
 # png(filename="out.png", width = 1280, height = 1024,)
 par(bg = 'black')
 plot(data$GazePointX,data$GazePointY, sub="", xlab="", ylab="",axes=FALSE, ylim=c(1024,0), xlim=c(0,1280),col="black")
-par(bg = 'black')
 points(data$GazePointX,data$GazePointY, col = "green", cex = .6)
 lines(data$GazePointX,data$GazePointY, col = "white")
-# dev.off()
+dev.off()

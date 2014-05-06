@@ -12,13 +12,12 @@ Open a Terminal window and enter the follwing code (This creates an R envoirment
 
     echo "R_LIBS=/Users/$HOME/rLibrary" > $HOME/.Renviron
 
-Then enter (This creates a folder called rLibrary in your homefolder. All installed libraries will go there.)  
+Creates a folder called "rLibrary" in your homefolder. All installed libraries will go there. Type:  
 
     mkdir ~/rLibrary  
 
 ###Start R.app from your Applications folder  
-
-####Check your current working directory by entering:  
+in the R console. Check your current working directory by entering:  
 
     getwd()  
 
@@ -33,7 +32,18 @@ Now you can place files in there and read them with R.
 
 Open the eyetracker.R with the R.app.  
 Select the lines you want to execute  
-hit cmd + enter  
+
+select:  
+
+    data <- read.table("tobii-CSVExport-All-Data-noheader-nofilter.tsv",sep="\t", header=TRUE)
+    # plot(data$GazePointX,data$GazePointY, main="eyetracker", sub="",xlab="X-axis GazePointX", ylab="GazePointY", ylim=c(1024,0), xlim=c(0,1280))
+    # png(filename="out.png", width = 1280, height = 1024,)
+    par(bg = 'black')
+    plot(data$GazePointX,data$GazePointY, sub="", xlab="", ylab="",axes=FALSE, ylim=c(1024,0), xlim=c(0,1280),col="black")
+    points(data$GazePointX,data$GazePointY, col = "green", cex = .6)
+    lines(data$GazePointX,data$GazePointY, col = "white")
+
+hit cmd + enter. This should open a window with your plot that looks like this:  
 
 ![out.png](out.png)  
 
