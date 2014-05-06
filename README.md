@@ -1,3 +1,8 @@
+Tobii Eyetracker in R
+=====================
+
+Just a small test to plot the data exported by the tobii eyetracker in R
+
 Tobii Eyetracker in R  
 
 - Go to [r-project.org/](http://www.r-project.org/)  
@@ -30,5 +35,6 @@ Set your working directory to somewhere where you can remember. e.g the Desktop 
 
 Now you can place files in there and read them with R.  
 
-
-
+- Open the eyetracker.R with the R app.  
+- Select the lines you want to execute  
+- hit cmd + enter  
